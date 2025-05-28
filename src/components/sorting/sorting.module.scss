@@ -1,0 +1,45 @@
+.buttons button {
+    background-color: #E8EBF2;
+    color: #4E148C;
+    border: 1px solid #4E148C;
+    height: 55px;
+    font-size: 16px;
+    margin-top: 20px;
+    box-sizing: border-box;
+  }
+.cheapButton {
+    margin-left: 50px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 242px;
+}
+.fastButton {
+    border-radius: 0;
+    width: 243px;
+}
+.optimalButton {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 242px;
+}
+.cheapButton.active {
+    background-color: #4E148C;
+    color: #E8EBF2;
+}
+.fastButton.active {
+    background-color: #4E148C;
+    color: #E8EBF2;
+}
+.optimalButton.active {
+    background-color: #4E148C;
+    color: #E8EBF2;
+}
+.main {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}

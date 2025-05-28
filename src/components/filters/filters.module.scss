@@ -1,0 +1,93 @@
+.filters {
+    display: flex;
+    margin: 21px;
+    margin-left: 200px;
+    padding: 19px;
+    background-color: #E8EBF2;
+    color: #4E148C;
+    flex-direction: column;
+    width: 272px;
+    max-height: 258px;
+    border-radius: 10px;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+h3 {
+    margin: 0;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding-left: 20px;
+    color: #858AE3;
+    gap: 21px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.customCheckbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmarkСompany {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #4E148C; 
+    margin-right: 20px; 
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+  
+  
+.customCheckbox input[type="checkbox"]:checked + .checkmarkСompany {
+    border-color: #4E148C; 
+    background-color: #E8EBF2; 
+    width: 21px;
+    height: 21px;
+}
+.checkmarkСompany::after {
+    content: "";
+    display: flex;
+    width: 13px;
+    height:13px;
+    background-color: #4E148C; 
+    border-radius:50%;
+    margin: 3px auto; 
+    opacity:0; 
+}
+.customCheckbox input[type="checkbox"]:checked + .checkmarkСompany::after {
+    opacity:1;
+}
+
+.checkmarkTransplants {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid #4E148C; 
+    margin-right: 20px; 
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+.customCheckbox input[type="checkbox"]:checked + .checkmarkTransplants {
+    border-color: #4E148C; 
+    background-color: #E8EBF2; 
+}
+.checkmarkTransplants::after {
+    content: "✔";
+    display: flex;
+    width: 12px;
+    height:12px;
+    color:  #4E148C; 
+    margin: -3px auto;
+    opacity:0; 
+}
+.customCheckbox input[type="checkbox"]:checked + .checkmarkTransplants::after {
+    opacity:1;
+}
