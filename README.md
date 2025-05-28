@@ -1,54 +1,39 @@
-# React + TypeScript + Vite
+Особенности приложения:
+Работа с фейковым серверным API с помощью async-thunk.
+Сортировка билетов по цене, длительности перелёта и количеству пересадок.
+Фильтрация по авиакомпаниям.
+Фильтрация по количеству пересадок.
+Вы можете использовать любой формат данных, но он должен поддерживать сортировку.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Чтобы создать заготовку проекта, воспользуйтесь Vite и выберите пресет react-ts или react-swc-ts:
 
-Currently, two official plugins are available:
+npm create vite@latest или yarn create vite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Также вы можете использовать Create React App (но учтите, что с сентября 2022 г. эта утилита больше не поддерживается).
 
-## Expanding the ESLint configuration
+Критерии оценивания
+Всего за проект можно получить 10 баллов.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Функциональные требования:
+Проект создан с помощью Vite или Create React App, исправно запускается с помощью команды npm start или npm run dev и собирается с помощью npm run build.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Полностью удовлетворяет — 2 балла.
+Частично удовлетворяет — 1 балл (проект собирается с ошибками).
+Не удовлетворяет — 0 баллов.
+Проект использует Redux Toolkit, не использует стандартный Redux с createStore, не использует легаси-методы connect, mapStateToProps, mapDispatchToProps.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Полностью удовлетворяет — 2 балла.
+Частично удовлетворяет — 1 балл (проект исправно работает, но использует старый API).
+Не удовлетворяет — 0 баллов.
+Требования к адаптивной вёрстке — приложение в целом соответствует макету. 
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Полностью удовлетворяет — 2 балла.
+Частично удовлетворяет — 1 балл (неправильная работа на одной из версий, сильное несоответствие макету).
+Не удовлетворяет — 0 баллов.
+Используются дополнительные методы из Redux Toolkit, такие как createAsyncThunk для запросов к API, createEntityAdapter для работы с массивами данных.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+За каждый дополнительный метод — 1 балл.
+Проект написан на TypeScript:
+
+Полностью удовлетворяет — 2 балла.
+Не удовлетворяет — 0 баллов.
